@@ -5,7 +5,6 @@
 * Nathan Grant
 * Rudra Guin
 * Tyler Hom
-* Delaney Johnson
 * Zixian “Steven” Qiu
 
 ## Project Description
