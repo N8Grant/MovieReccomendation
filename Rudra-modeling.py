@@ -9,8 +9,11 @@ import pandas as pd
 import numpy as np
 from sklearn.neural_network import MLPRegressor
 from sklearn.tree import DecisionTreeRegressor
+from sklearn.ensemble import RandomForestRegressor
+from sklearn.ensemble import GradientBoostingRegressor
+
 from sklearn.model_selection import cross_validate
-import os
+
 
 def make_ratings(ratings):
     ratings['genre2'] = ratings['genre2'].fillna("Unknown")
@@ -64,7 +67,19 @@ def fit_NN_model(ratings):
 def fit_RegTree_model(ratings):
     X, y = make_X_and_Y(ratings)
     
-    return DecisionTreeRegressor().fit(X, y)
+    return DecisionTreeRegressor(max_depth=8).fit(X, y)
+
+
+def fit_RandForReg_model(ratings):
+    X, y = make_X_and_Y(ratings)
+    
+    return RandomForestRegressor(max_depth=8).fit(X, y)
+
+
+def fit_GradBoostReg(ratings):
+    X, y = make_X_and_Y(ratings)
+    
+    return GradientBoostingRegressor("""loss='lad'""", learning_rate=0.01).fit(X, y)
 
 
 def cross_val(model, ratings, k):
@@ -76,10 +91,9 @@ def cross_val(model, ratings, k):
 
 
 if __name__ == "__main__":
-    cwd = os.getcwd() + "/data"
-    movies = pd.read_csv(cwd+ "/movies.tsv", sep='\t')
-    users = pd.read_csv(cwd + "/users.csv")
-    ratings = pd.read_csv(cwd+ "/ratings.csv")
+    movies = pd.read_csv("movies.tsv", sep='\t')
+    users = pd.read_csv("users.csv")
+    ratings = pd.read_csv("ratings.csv")
 
     ratings = ratings.merge(movies, how='left', left_on=['movieID'], right_on=['movieID'])
     ratings = ratings.merge(users, how='left', left_on=['userID'], right_on=['userID'])
@@ -89,9 +103,19 @@ if __name__ == "__main__":
     mod = fit_NN_model(ratings)
     
     cross_val_test_score = cross_val(mod, ratings, 10)
-    print("\nMAD prediction error for NN (10-fold cross-validation) = {}".format(cross_val_test_score))
+    print("\nMAD prediction error for Neural Network (10-fold cross-validation) = {}".format(cross_val_test_score))
     
     mod = fit_RegTree_model(ratings)
     
     cross_val_test_score = cross_val(mod, ratings, 10)
-    print("\nMAD prediction error for Reg Tree (10-fold cross-validation) = {}".format(cross_val_test_score))
+    print("\nMAD prediction error for Regression Tree (10-fold cross-validation) = {}".format(cross_val_test_score))
+    
+    mod = fit_RegTree_model(ratings)
+    
+    cross_val_test_score = cross_val(mod, ratings, 10)
+    print("\nMAD prediction error for Random Forest (10-fold cross-validation) = {}".format(cross_val_test_score))
+    
+    mod = fit_RegTree_model(ratings)
+    
+    cross_val_test_score = cross_val(mod, ratings, 10)
+    print("\nMAD prediction error for Gradient Booster Regressor (10-fold cross-validation) = {}".format(cross_val_test_score))
