@@ -10,7 +10,7 @@ import numpy as np
 from sklearn.neural_network import MLPRegressor
 from sklearn.tree import DecisionTreeRegressor
 from sklearn.model_selection import cross_validate
-
+import os
 
 def make_ratings(ratings):
     ratings['genre2'] = ratings['genre2'].fillna("Unknown")
@@ -76,9 +76,10 @@ def cross_val(model, ratings, k):
 
 
 if __name__ == "__main__":
-    movies = pd.read_csv("movies.tsv", sep='\t')
-    users = pd.read_csv("users.csv")
-    ratings = pd.read_csv("ratings.csv")
+    cwd = os.getcwd() + "/data"
+    movies = pd.read_csv(cwd+ "/movies.tsv", sep='\t')
+    users = pd.read_csv(cwd + "/users.csv")
+    ratings = pd.read_csv(cwd+ "/ratings.csv")
 
     ratings = ratings.merge(movies, how='left', left_on=['movieID'], right_on=['movieID'])
     ratings = ratings.merge(users, how='left', left_on=['userID'], right_on=['userID'])
