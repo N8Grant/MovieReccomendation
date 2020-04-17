@@ -91,9 +91,9 @@ def cross_val(model, ratings, k):
 
 
 if __name__ == "__main__":
-    movies = pd.read_csv("movies.tsv", sep='\t')
-    users = pd.read_csv("users.csv")
-    ratings = pd.read_csv("ratings.csv")
+    movies = pd.read_csv("data/movies.tsv", sep='\t')
+    users = pd.read_csv("data/users.csv")
+    ratings = pd.read_csv("data/ratings.csv")
 
     ratings = ratings.merge(movies, how='left', left_on=['movieID'], right_on=['movieID'])
     ratings = ratings.merge(users, how='left', left_on=['userID'], right_on=['userID'])
