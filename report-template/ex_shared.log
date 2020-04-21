@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 APR 2020 00:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  20 APR 2020 01:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -346,13 +346,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \usepackage{
+l.42 \usepackage{
                  amsopn}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.44 \DeclareMathOperator
+l.43 \DeclareMathOperator
                          {\diag}{diag}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -361,7 +361,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.44 \DeclareMathOperator{\diag
+l.43 \DeclareMathOperator{\diag
                                }{diag}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -376,7 +376,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.44 \DeclareMathOperator{\diag}{d
+l.43 \DeclareMathOperator{\diag}{d
                                   iag}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -386,7 +386,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no g in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 44--45
+Overfull \hbox (20.0pt too wide) in paragraph at lines 43--44
 [] 
  []
 
@@ -398,11 +398,11 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 44--45
 
  
 Here is how much of TeX's memory you used:
- 20 strings out of 480608
- 424 string characters out of 5903631
+ 18 strings out of 480608
+ 416 string characters out of 5903631
  239610 words of memory out of 5000000
- 16013 multiletter control sequences out of 15000+600000
+ 16011 multiletter control sequences out of 15000+600000
  532338 words of font info for 24 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 12i,0n,15p,109b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 12i,0n,15p,106b,16s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!
