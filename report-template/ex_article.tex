@@ -1,6 +1,6 @@
 % SIAM Article Template
 \documentclass[review,onefignum,onetabnum]{siamart171218}
-
+\usepackage{amssymb}
 % Information that is shared between the article and the supplement
 % (title and author information, macros, packages, etc.) goes into
 % ex_shared.tex. If there is no supplement, this file can be included
@@ -56,7 +56,8 @@ In this project we explored various techniques, both used in and out of class to
 \section{Introduction}
 Recommendation systems are some of the most important applications in modern day machine learning. Companies such as Amazon must use purchase history and search trends to predict which items you might want to buy. Netflix faces a similar dilemma in that users will watch and rate movies and they must recommend new movies which the users will like. In this project we explored many approaches to movie recommendation to see what offered the best results.
 
-The biggest challenge to recommendation systems is the sparsity to the data. In the data set any given user only rates a small fraction of the total of movies in the database. Such sparse information makes it hard to make very accurate predictions about what movies the users would enjoy. In our projects we used methods such as Decision Trees, XGBoost, Neural Networks, SVD, and a Weighted SVD Nearest Neighbor approach.
+The biggest challenge to recommendation systems is the sparsity to the data. In the data set any given user only rates a small fraction of the total of movies in the database. Such sparse information makes it hard to make very accurate predictions about what movies the users would enjoy. In our projects we used methods such as Decision Trees, XGBoost, Neural Networks, SVD, and a Weighted SVD Nearest Neighbor approach. 
+	We evaluate our results based off of two metrics, accuracy of the classification of a users movie rating, and the mean absolute deviation from the correct rating.
 
 % The outline is not required, but we show an example here.
 The paper is organized as follows. Our main results are in
@@ -67,77 +68,22 @@ results are in \cref{sec:experiments}, and the conclusions follow in
 \section{Main results}
 \label{sec:main}
 
-We interleave text filler with some example theorems and theorem-like
-items.
+The movie recommendation system was evaluated in one of two ways. One way is through human evaluation of the results. Given a user and their rated movies, the algorithm could output movies that they might like. However, this gets tricky because there is no metric to evaluate how good these recommendations actually are. The second option is to take out examples from the training data to use them as test data which was the most promising option. 
+First, we approached the problem using classification models where a users data would be input along with the movie data in order to predict what the user would rate the movie. These techniques resulted in accuracies which were not much better than random. 
 
-\lipsum[4]
+\begin{table}[]
+\caption {MAD of Methods Used} \label{tab:title} 
+\begin{tabular}{|l|l|}
+\hline
+Neural Network                & 0.8799 \\ \hline
+Regression Tree               & 0.8938 \\ \hline
+Random Forest                 & 0.8936 \\ \hline
+Gradient Boosted Tree         & 0.8938 \\ \hline
+SVD  with Varying KNN         & 0.6326 \\ \hline
+SVD with Weighted Varying KNN & .4838\\ \hline
+\end{tabular}
+\end{table}
 
-Here we state our main result as \cref{thm:bigthm}; the proof is
-deferred to \cref{sec:proof}.
-
-\begin{theorem}[$LDL^T$ Factorization \cite{GoVa13}]\label{thm:bigthm}
-  If $A \in \mathbb{R}^{n \times n}$ is symmetric and the principal
-  submatrix $A(1:k,1:k)$ is nonsingular for $k=1:n-1$, then there
-  exists a unit lower triangular matrix $L$ and a diagonal matrix
-  \begin{displaymath}
-    D = \diag(d_1,\dots,d_n)
-  \end{displaymath}
-  such that $A=LDL^T$. The factorization is unique.
-\end{theorem}
-
-\lipsum[6]
-
-\begin{theorem}[Mean Value Theorem]\label{thm:mvt}
-  Suppose $f$ is a function that is continuous on the closed interval
-  $[a,b]$.  and differentiable on the open interval $(a,b)$.
-  Then there exists a number $c$ such that $a < c < b$ and
-  \begin{displaymath}
-    f'(c) = \frac{f(b)-f(a)}{b-a}.
-  \end{displaymath}
-  In other words,
-  \begin{displaymath}
-    f(b)-f(a) = f'(c)(b-a).
-  \end{displaymath}
-\end{theorem}
-
-Observe that \cref{thm:bigthm,thm:mvt,cor:a} correctly mix references
-to multiple labels.
-
-\begin{corollary}\label{cor:a}
-  Let $f(x)$ be continuous and differentiable everywhere. If $f(x)$
-  has at least two roots, then $f'(x)$ must have at least one root.
-\end{corollary}
-\begin{proof}
-  Let $a$ and $b$ be two distinct roots of $f$.
-  By \cref{thm:mvt}, there exists a number $c$ such that
-  \begin{displaymath}
-    f'(c) = \frac{f(b)-f(a)}{b-a} = \frac{0-0}{b-a} = 0.
-  \end{displaymath}
-\end{proof}
-
-Note that it may require two \LaTeX\ compilations for the proof marks
-to show.
-
-Display matrices can be rendered using environments from \texttt{amsmath}:
-\begin{equation}\label{eq:matrices}
-S=\begin{bmatrix}1&0\\0&0\end{bmatrix}
-\quad\text{and}\quad
-C=\begin{pmatrix}1&1&0\\1&1&0\\0&0&0\end{pmatrix}.
-\end{equation}
-Equation \cref{eq:matrices} shows some example matrices.
-
-We calculate the Fr\'{e}chet derivative of $F$ as follows:
-\begin{subequations}
-\begin{align}
-  F'(U,V)(H,K) 
-  &= \langle R(U,V),H\Sigma V^{T} + U\Sigma K^{T} -
-  P(H\Sigma V^{T} + U\Sigma K^{T})\rangle \label{eq:aa} \\
-  &= \langle R(U,V),H\Sigma V^{T} + U\Sigma K^{T}\rangle 
-  \nonumber \\
-  &= \langle R(U,V)V\Sigma^{T},H\rangle + 
-  \langle \Sigma^{T}U^{T}R(U,V),K^{T}\rangle. \label{eq:bb}
-\end{align}
-\end{subequations}
 \Cref{eq:aa} is the first line, and \cref{eq:bb} is the last line.
 
 \section{Algorithm}
@@ -148,17 +94,16 @@ We calculate the Fr\'{e}chet derivative of $F$ as follows:
 Our analysis leads to the algorithm in \cref{alg:buildtree}.
 
 \begin{algorithm}
-\caption{Build tree}
+\caption{SVD Nearest Weighted Neighbors}
 \label{alg:buildtree}
 \begin{algorithmic}
-\STATE{Define $P:=T:=\{ \{1\},\ldots,\{d\}$\}}
-\WHILE{$\#P > 1$}
-\STATE{Choose $C^\prime\in\mathcal{C}_p(P)$ with $C^\prime := \operatorname{argmin}_{C\in\mathcal{C}_p(P)} \varrho(C)$}
-\STATE{Find an optimal partition tree $T_{C^\prime}$ }
-\STATE{Update $P := (P{\setminus} C^\prime) \cup \{ \bigcup_{t\in C^\prime} t \}$}
-\STATE{Update $T := T \cup \{ \bigcup_{t\in\tau} t : \tau\in T_{C^\prime}{\setminus} \mathcal{L}(T_{C^\prime})\}$}
+\STATE{Define Epochs: ${1-N}$}
+\WHILE{$n < Epochs$}
+\STATE{Find $ \triangledown {E = (\frac{\delta E}{\delta W_{i}},...\frac{\delta E}{\delta w_{comp}})}$}
+\STATE{Update $W := -\gamma*\triangledown E$ }
+
 \ENDWHILE
-\RETURN $T$
+\RETURN $W$
 \end{algorithmic}
 \end{algorithm}
 
