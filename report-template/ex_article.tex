@@ -71,6 +71,11 @@ results are in \cref{sec:experiments}, and the conclusions follow in
 The movie recommendation system was evaluated in one of two ways. One way is through human evaluation of the results. Given a user and their rated movies, the algorithm could output movies that they might like. However, this gets tricky because there is no metric to evaluate how good these recommendations actually are. The second option is to take out examples from the training data to use them as test data which was the most promising option. 
 First, we approached the problem using classification models where a users data would be input along with the movie data in order to predict what the user would rate the movie. These techniques resulted in accuracies which were not much better than random. 
 
+\Cref{eq:aa} is the first line, and \cref{eq:bb} is the last line.
+
+\section{Algorithm}
+\label{sec:alg}
+
 \begin{table}[]
 \caption {MAD of Methods Used} \label{tab:title} 
 \begin{tabular}{|l|l|}
@@ -83,15 +88,6 @@ SVD  with Varying KNN         & 0.6326 \\ \hline
 SVD with Weighted Varying KNN & .4838\\ \hline
 \end{tabular}
 \end{table}
-
-\Cref{eq:aa} is the first line, and \cref{eq:bb} is the last line.
-
-\section{Algorithm}
-\label{sec:alg}
-
-\lipsum[40]
-
-Our analysis leads to the algorithm in \cref{alg:buildtree}.
 
 \begin{algorithm}
 \caption{SVD Nearest Weighted Neighbors}
@@ -107,7 +103,6 @@ Our analysis leads to the algorithm in \cref{alg:buildtree}.
 \end{algorithmic}
 \end{algorithm}
 
-\lipsum[41]
 
 \section{Experimental results}
 \label{sec:experiments}
