@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  23 APR 2020 12:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  29 APR 2020 18:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -447,29 +447,29 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 Package xr Warning: 
 No file ex_supplement.aux
 LABELS NOT IMPORTED.
- on input line 23.
+ on input line 25.
 
 (./ex_article.aux)
 \openout1 = `ex_article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 37.
-LaTeX Font Info:    ... okay on input line 37.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 \AtBeginShipoutBox=\box51
-Package hyperref Info: Link coloring ON on input line 37.
+Package hyperref Info: Link coloring ON on input line 27.
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -483,9 +483,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count304
 )
-LaTeX Info: Redefining \ref on input line 37.
-LaTeX Info: Redefining \pageref on input line 37.
-LaTeX Info: Redefining \nameref on input line 37.
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+LaTeX Info: Redefining \nameref on input line 27.
  (./ex_article.out) (./ex_article.out)
 \@outlinefile=\write3
 \openout3 = `ex_article.out'.
@@ -504,105 +504,91 @@ LaTeX Info: Redefining \nameref on input line 37.
 \MPnumerator=\count309
 \makeMPintoPDFobject=\count310
 \everyMPtoPDFconversion=\toks44
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+) [1
 
- (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
+put line 66.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 68.
+
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 68.
 
 
 (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+! Extra }, or forgotten $.
+l.74 ...TE{Update $W :=  (\sum_{}^{} W_{i} )^{-1}}
+                                                  *W $}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
 
-LaTeX Warning: Reference `eq:aa' on page 1 undefined on input line 74.
+<reccomendations.png, id=31, 451.18562pt x 370.38374pt>
+File: reccomendations.png Graphic file (type png)
+<use reccomendations.png>
+Package pdftex.def Info: reccomendations.png  used on input line 90.
+(pdftex.def)             Requested size: 398.35951pt x 327.2103pt.
 
+Overfull \hbox (27.97577pt too wide) in paragraph at lines 90--91
+ [][] |
+ []
 
-LaTeX Warning: Reference `eq:bb' on page 1 undefined on input line 74.
+[2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
-put line 93.
+ [3 <./reccomendations.png>]
+Overfull \hbox (3.46213pt too wide) in paragraph at lines 118--119
+[]\OT1/cmr/m/n/10 Further stud-ies would prob-a-bly be most in-ter-ested in the
+ Al-ter-nat-ing Least Squares|
+ []
 
-LaTeX Warning: Reference `tab:foo' on page 1 undefined on input line 113.
-
-[1
-
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Package epstopdf Info: Source file: <lexample_fig1.eps>
-(epstopdf)                    date: 2016-03-24 14:49:00
-(epstopdf)                    size: 312532 bytes
-(epstopdf)             Output file: <lexample_fig1-eps-converted-to.pdf>
-(epstopdf)                    date: 2018-04-09 14:49:26
-(epstopdf)                    size: 29664 bytes
-(epstopdf)             Command: <repstopdf --outfile=lexample_fig1-eps-converte
-d-to.pdf lexample_fig1.eps>
-(epstopdf)             \includegraphics on input line 117.
-Package epstopdf Info: Output file is already uptodate.
-<lexample_fig1-eps-converted-to.pdf, id=58, 160.6pt x 130.4875pt>
-File: lexample_fig1-eps-converted-to.pdf Graphic file (type pdf)
-<use lexample_fig1-eps-converted-to.pdf>
-Package pdftex.def Info: lexample_fig1-eps-converted-to.pdf  used on input line
- 117.
-(pdftex.def)             Requested size: 160.5996pt x 130.48717pt.
-
-[2 <./lexample_fig1-eps-converted-to.pdf>]
-Package hyperref Info: bookmark level for unknown lemma defaults to 0 on input 
-line 139.
- (./ex_article.bbl)
 \tf@thm=\write4
 \openout4 = `ex_article.thm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 149.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 149.
-
-(./ex_article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 149.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 149.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+[4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
+ (./ex_article.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `ex_article.out' has not changed.
-(rerunfilecheck)             Checksum: 46D53B1BFBD10B11908E5136DDABA4C0;473.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 149.
+(rerunfilecheck)             Checksum: 8F7B7871CA8312A63068087A2C4CFC37;175.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 121.
  ) 
 Here is how much of TeX's memory you used:
- 10203 strings out of 480608
- 170021 string characters out of 5903631
- 669248 words of memory out of 5000000
- 25893 multiletter control sequences out of 15000+600000
- 541503 words of font info for 58 fonts, out of 8000000 for 9000
+ 10154 strings out of 480608
+ 169425 string characters out of 5903631
+ 599895 words of memory out of 5000000
+ 25860 multiletter control sequences out of 15000+600000
+ 535952 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,8n,41p,494b,507s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pf
-b></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+ 41i,8n,41p,1528b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
 /usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
-usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></us
-r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/
-local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/lo
-cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
-l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
-exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
-ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
-/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
-2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
-20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2020/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on ex_article.pdf (3 pages, 219446 bytes).
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
+al/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
+texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on ex_article.pdf (4 pages, 246917 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
+ 124 PDF objects out of 1000 (max. 8388607)
+ 100 compressed objects within 1 object stream
  24 named destinations out of 1000 (max. 500000)
- 78 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38 words of extra memory for PDF output out of 10000 (max. 10000000)
 
